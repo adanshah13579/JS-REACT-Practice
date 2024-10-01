@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="clickButton">Click Me</button>
+<p id="clickCount">Click count: 0</p>
+
+<script>
+let count = 0;
+const button = document.getElementById('clickButton');
+const countDisplay = document.getElementById('clickCount');
+
+function handleClick() {
+  count++;
+  countDisplay.innerText = `Click count: ${count}`;
+}
+
+const throttledClick = throttle(handleClick, 2000);
+
+button.addEventListener('click', throttledClick);
+
+function throttle(func, limit) {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+</script>
+<!-- <input type="text" id="search" placeholder="Search..." />
+<div id="result"></div>
+
+<script>
+  function searchQuery(query) {
+    console.log(`Searching for: ${query}`);
+    document.getElementById('result').innerText = `Results for: ${query}`;
+  }
+  
+  function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+  
+  const searchInput = document.getElementById('search');
+  const debouncedSearch = debounce((event) => searchQuery(event.target.value), 500);
+  
+  searchInput.addEventListener('input', debouncedSearch);
+  </script> -->
+
+</body>
+
+</html> -->
